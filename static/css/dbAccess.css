@@ -1,0 +1,61 @@
+/* TABLE */
+
+table, th, td {
+  
+border: 1px solid black;
+  
+border-collapse: collapse;
+  
+background: white;
+  color black;
+  
+min-width: 70px;
+  
+word-break: break-word;
+
+}
+
+th, td {
+  
+border: 1px solid black;
+  
+padding: 5px;
+  
+text-align: left;
+  
+background: white;
+  
+color: black;
+
+}                           
+/* ADD TAGS PAGE */
+
+#product-listing-box{
+    
+width: 400px;
+    
+margin: auto;
+
+}
+#tags_select {
+	
+display: none;
+}                           
+/* INPUT FORMS */
+
+.input-box {
+    
+width: 500px;
+    
+clear: both;
+
+
+}
+.input-box input {
+ 
+ width: 100%;
+  
+clear: both;
+  background: white;
+
+}

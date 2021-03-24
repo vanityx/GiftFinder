@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<!-- saved from url=(0106)https://www.pythonanywhere.com/user/lon17druz01/files/home/lon17druz01/mysite/templates/questionnaire.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--  Styles  -->
+      <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+      <link rel="stylesheet" href="./questionnaire_files/bootstrap-multiselect.css">
+      <link rel="stylesheet" href="./questionnaire_files/bootstrap.azaa.css">
+	  <link rel="stylesheet" href="./questionnaire_files/bootstrap-select.css"> <!-- Fixes the styles of no multiselect drop menus -->
+      <link rel="stylesheet" href="./questionnaire_files/index.css">
+
+    <!-- Scripts -->
+      <script src="./questionnaire_files/jquery-2.2.0.min.js.download"></script>
+      <script src="./questionnaire_files/bootstrap.min.js.download"></script>
+      <script src="./questionnaire_files/bootstrap-multiselect.js.download"></script>
+      
+      <title>Gift Finder</title>
+</head>
+
+<body>
+
+<div class="topnav">
+  <div style="text-align:center; text-decoration: none; font-size: 20px;">
+   <a href="https://www.pythonanywhere.com/" class="active">GIFT FINDER</a>
+  </div>
+
+    <div class="home-logo"><a href="https://www.pythonanywhere.com/">
+     <img src="./questionnaire_files/home.png" width="30px" height="30px"></a>
+    </div>
+    <div class="login-logo"><a href="https://www.pythonanywhere.com/login">
+     <img src="./questionnaire_files/signin.png" width="20px" height="20px"></a>
+    </div>
+  </div>
+
+    <br>
+
+        <!-- Drop-down Box Questions -->
+<center>
+        <h1>Give us the basics!</h1>
+        <p><b>*Must select one from each</b>
+        <br>
+        <br>
+        </p><form action="https://www.pythonanywhere.com/results" name="qform" method="POST" class="selection" onsubmit="return validateFULLQ()">
+
+            <label><b>Gender</b></label>
+            <br>
+            <select id="gender" name="gender"> <!-- the class selectpicker gives the dropbox a style -->
+             <option value="">Select</option>
+             <option value="female">Female</option>
+             <option value="male">Male</option>
+             <option value="othergen">Other</option>
+            </select>
+        <br><div id="gendermsg" class="validation-msg" style="display: none">Please select an option</div>
+        <br>
+            <label><b>Age</b></label>
+            <br>
+            <select id="age" name="age">
+             <option value="">Select</option>
+             <option value="under16">Under 16</option>
+             <option value="16_25">16 to 25</option>
+             <option value="26_40">26 to 40</option>
+             <option value="40_60">40 to 60</option>
+             <option value="above60">Over 60</option>
+            </select>
+        <br><div id="agemsg" class="validation-msg" style="display: none">Please select an option</div>
+        <br>
+            <label><b>Price Range</b></label>
+            <br>
+            <select id="priceRange" name="priceRange">
+             <option value="">Select</option>
+             <option value="under_p15">Less than £15</option>
+             <option value="p15_30">£15-£30</option>
+             <option value="p30_50">£30-£50</option>
+             <option value="p50_80">£50-£80</option>
+             <option value="p80_150">£80-£150</option>
+             <option value="above150">£150+</option>
+             <option value="anyprice">No budget</option>
+            </select>
+        <br><div id="pricemsg" class="validation-msg" style="display: none">Please select an option</div>
+        <br>
+            <label><b>Specific Event</b></label>
+            <br>
+            <select id="specEvent" name="specEvent">
+              <option value="">Select</option>
+              <option value="birthday">Birthday</option>
+              <option value="anniversary">Anniversary</option>
+              <option value="christmas">Christmas</option>
+              <option value="valentines">Valentine's Day</option>
+              <option value="evnone">None</option>
+            </select>
+        <br><div id="eventmsg" class="validation-msg" style="display: none">Please select an option</div>
+        <br>
+
+        <h1>Now tell us about your friend to find a suitable gift for them!</h1>
+        <p><b>*Must tick at least one from each</b></p>
+        <br>
+    <div class="content bootstrap">
+         <option>Do they like clothing?</option>
+         <input type="radio" class="clothing" value="yes" id="clothing_yes" name="clothingCheck">Yes
+         <input type="radio" class="clothing" value="no" id="clothing_no" name="clothingCheck">No<br> <!-- Added "checked", when the page loads. The checkbox(radiobutton) is checked by default-->
+         <div id="id_checked_clothes" style="display: none">
+            <select multiple="" id="clothing" name="clothing[]" style="display: none;">
+               <option value="occasion">Occasion</option>
+               <option value="casual">Casual</option>
+               <option value="trendy">Trendy</option>
+               <option value="sporty">Sporty</option>
+            </select><div class="btn-group"><button type="button" class="multiselect dropdown-toggle btn btn-default" data-toggle="dropdown" title="None selected"><span class="multiselect-selected-text">None selected</span> <b class="caret"></b></button><ul class="multiselect-container dropdown-menu"><li class="multiselect-item multiselect-all"><a tabindex="0" class="multiselect-all"><label class="checkbox"><input type="checkbox" value="multiselect-all">  Select all</label></a></li><li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="occasion"> Occasion</label></a></li><li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="casual"> Casual</label></a></li><li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="trendy"> Trendy</label></a></li><li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="sporty"> Sporty</label></a></li></ul></div>
+         </div>
+         <br><div id="clothingmsg" class="validation-msg" style="display: none">Please select at least one</div>
+         <br>
+         <option>Do they like makeup?</option>
+         <input type="radio" class="makeup" value="yes" id="makeup_yes" name="makeup">Yes
+         <input type="radio" class="makeup" value="no" id="makeup_no" name="makeup">No<br>
+         <div id="id_checked_makeup" style="display: none">
+            <select id="makeup" multiple="multiple" name="makeup[]" style="display: none;">
+               <option value="faceprod">Face products</option>
+               <option value="eyeprod">Eyeshadow, mascara</option>
+               <option value="browprod">Brow products</option>
+               <option value="lipsticks">Lipsticks</option>
+               <option value="makeup_tools">Makeup Tools</option>
+            </select><div class="btn-group"><button type="button" class="multiselect dropdown-toggle btn btn-default" data-toggle="dropdown" title="None selected"><span class="multiselect-selected-text">None selected</span> <b class="caret"></b></button><ul class="multiselect-container dropdown-menu"><li class="multiselect-item multiselect-all"><a tabindex="0" class="multiselect-all"><label class="checkbox"><input type="checkbox" value="multiselect-all">  Select all</label></a></li><li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="faceprod"> Face products</label></a></li><li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="eyeprod"> Eyeshadow, mascara</label></a></li><li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="browprod"> Brow products</label></a></li><li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="lipsticks"> Lipsticks</label></a></li><li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="makeup_tools"> Makeup Tools</label></a></li></ul></div>
+         </div>
+         <br><div id="makeupmsg" class="validation-msg" style="display: none">Please select at least one</div>
+         <br>
+         <option>Are they interested in skincare?</option>
+         <input type="radio" class="skincare" value="yes" id="skincare_yes" name="skincare">Yes
+         <input type="radio" class="skincare" value="no" id="skincare_no" name="skincare">No<br>
+         <div id="id_checked_skincare" style="display: none">
+            <select id="skincare" multiple="multiple" name="skincare[]" style="display: none;">
+               <option value="skincare_ess">Skincare essentials</option>
+               <option value="masks">Masks</option>
+               <option value="shower_bod">Shower &amp; Body</option>
+            </select><div class="btn-group"><button type="button" class="multiselect dropdown-toggle btn btn-default" data-toggle="dropdown" title="None selected"><span class="multiselect-selected-text">None selected</span> <b class="caret"></b></button><ul class="multiselect-container dropdown-menu"><li class="multiselect-item multiselect-all"><a tabindex="0" class="multiselect-all"><label class="checkbox"><input type="checkbox" value="multiselect-all">  Select all</label></a></li><li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="skincare_ess"> Skincare essentials</label></a></li><li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="masks"> Masks</label></a></li><li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="shower_bod"> Shower &amp; Body</label></a></li></ul></div>
+         </div>
+         <br><div id="skincaremsg" class="validation-msg" style="display: none">Please select at least one</div>
+         <br>
+         <option>Are they interested in accessories?</option>
+         <input type="radio" class="jewelry" value="yes" id="jewelry_yes" name="jewelry">Yes
+         <input type="radio" class="jewelry" value="no" id="jewelry_no" name="jewelry">No<br>
+         <div id="id_checked_jewelry" style="display: none">
+            <select id="jewelry" multiple="multiple" name="jewelry[]" style="display: none;">
+               <option value="earrings">Earrings</option>
+               <option value="necklaces">Necklaces, chokers</option>
+               <option value="hair_acc">Hair accessories</option>
+               <option value="personalised">Personalised</option>
+               <option value="bags">Bags</option>
+               <option value="m_accessories">Male Accessories</option>
+            </select><div class="btn-group"><button type="button" class="multiselect dropdown-toggle btn btn-default" data-toggle="dropdown" title="None selected"><span class="multiselect-selected-text">None selected</span> <b class="caret"></b></button><ul class="multiselect-container dropdown-menu"><li class="multiselect-item multiselect-all"><a tabindex="0" class="multiselect-all"><label class="checkbox"><input type="checkbox" value="multiselect-all">  Select all</label></a></li><li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="earrings"> Earrings</label></a></li><li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="necklaces"> Necklaces, chokers</label></a></li><li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="hair_acc"> Hair accessories</label></a></li><li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="personalised"> Personalised</label></a></li><li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="bags"> Bags</label></a></li><li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="m_accessories"> Male Accessories</label></a></li></ul></div>
+         </div>
+         <br><div id="jewelrymsg" class="validation-msg" style="display: none">Please select at least one</div>
+         <br>
+         <option>Do they like reading?</option>
+         <input type="radio" class="reading" value="yes" id="reading_yes" name="reading">Yes
+         <input type="radio" class="reading" value="no" id="reading_no" name="reading">No<br>
+         <div id="id_checked_reading" style="display: none">
+            <select id="reading" multiple="multiple" name="reading[]" style="display: none;">
+               <option value="fantasy_books">Fantasy</option>
+               <option value="crime_books">Crime</option>
+               <option value="romance_books">Romance</option>
+               <option value="drama_books">Drama</option>
+               <option value="philo_books">Philosophical</option>
+               <option value="nonfic_books">Non-fiction</option>
+            </select><div class="btn-group"><button type="button" class="multiselect dropdown-toggle btn btn-default" data-toggle="dropdown" title="None selected"><span class="multiselect-selected-text">None selected</span> <b class="caret"></b></button><ul class="multiselect-container dropdown-menu"><li class="multiselect-item multiselect-all"><a tabindex="0" class="multiselect-all"><label class="checkbox"><input type="checkbox" value="multiselect-all">  Select all</label></a></li><li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="fantasy_books"> Fantasy</label></a></li><li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="crime_books"> Crime</label></a></li><li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="romance_books"> Romance</label></a></li><li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="drama_books"> Drama</label></a></li><li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="philo_books"> Philosophical</label></a></li><li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="nonfic_books"> Non-fiction</label></a></li></ul></div>
+         </div>
+         <br><div id="readingmsg" class="validation-msg" style="display: none">Please select at least one</div>
+         <br>
+         <option>Are they interested in games?</option>
+         <input type="radio" class="games" value="yes" id="games_yes" name="games">Yes
+         <input type="radio" class="games" value="no" id="games_no" name="games">No<br>
+         <div id="id_checked_games" style="display: none">
+            <select id="games" multiple="multiple" name="games[]" style="display: none;">
+               <option value="fps_games">FPS Games</option>
+               <option value="rpg_games">RPG Games</option>
+               <option value="building_games">Building/Creating Games</option>
+               <option value="boardcard_games">Board/Card Games</option>
+               <option value="toys">Toys</option>
+            </select><div class="btn-group"><button type="button" class="multiselect dropdown-toggle btn btn-default" data-toggle="dropdown" title="None selected"><span class="multiselect-selected-text">None selected</span> <b class="caret"></b></button><ul class="multiselect-container dropdown-menu"><li class="multiselect-item multiselect-all"><a tabindex="0" class="multiselect-all"><label class="checkbox"><input type="checkbox" value="multiselect-all">  Select all</label></a></li><li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="fps_games"> FPS Games</label></a></li><li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="rpg_games"> RPG Games</label></a></li><li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="building_games"> Building/Creating Games</label></a></li><li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="boardcard_games"> Board/Card Games</label></a></li><li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="toys"> Toys</label></a></li></ul></div>
+         </div>
+         <br><div id="gamesmsg" class="validation-msg" style="display: none">Please select at least one</div>
+         <br>
+         <option>Are they interested in tech?</option>
+         <input type="radio" class="tech" value="yes" id="tech_yes" name="tech">Yes
+         <input type="radio" class="tech" value="no" id="tech_no" name="tech">No<br>
+         <div id="id_checked_tech" style="display: none">
+            <select id="tech" multiple="multiple" name="tech[]" style="display: none;">
+               <option value="phone">Phone gadgets</option>
+               <option value="photography">Photography</option>
+               <option value="music">Music</option>
+               <option value="comp_acc">Computer/Gaming accessories</option>
+               <option value="cool_gadgets">Cool gadgets</option>
+            </select><div class="btn-group"><button type="button" class="multiselect dropdown-toggle btn btn-default" data-toggle="dropdown" title="None selected"><span class="multiselect-selected-text">None selected</span> <b class="caret"></b></button><ul class="multiselect-container dropdown-menu"><li class="multiselect-item multiselect-all"><a tabindex="0" class="multiselect-all"><label class="checkbox"><input type="checkbox" value="multiselect-all">  Select all</label></a></li><li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="phone"> Phone gadgets</label></a></li><li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="photography"> Photography</label></a></li><li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="music"> Music</label></a></li><li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="comp_acc"> Computer/Gaming accessories</label></a></li><li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="cool_gadgets"> Cool gadgets</label></a></li></ul></div>
+         </div>
+         <br><div id="techmsg" class="validation-msg" style="display: none">Please select at least one</div>
+         <br>
+         <option>Do they like decorating their room/home?</option>
+         <input type="radio" class="deco" value="yes" id="deco_yes" name="deco">Yes
+         <input type="radio" class="deco" value="no" id="deco_no" name="deco">No<br>
+         <div id="id_checked_deco" style="display: none">
+            <select id="deco" multiple="multiple" name="deco[]" style="display: none;">
+               <option value="desk_deco">Room Decor</option>
+               <option value="kitchen">Kitchen Decor</option>
+               <option value="stationary">Stationary</option>
+               <option value="candles">Candles</option>
+            </select><div class="btn-group"><button type="button" class="multiselect dropdown-toggle btn btn-default" data-toggle="dropdown" title="None selected"><span class="multiselect-selected-text">None selected</span> <b class="caret"></b></button><ul class="multiselect-container dropdown-menu"><li class="multiselect-item multiselect-all"><a tabindex="0" class="multiselect-all"><label class="checkbox"><input type="checkbox" value="multiselect-all">  Select all</label></a></li><li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="desk_deco"> Room Decor</label></a></li><li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="kitchen"> Kitchen Decor</label></a></li><li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="stationary"> Stationary</label></a></li><li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="candles"> Candles</label></a></li></ul></div>
+         </div>
+         <br><div id="decomsg" class="validation-msg" style="display: none">Please select at least one</div>
+         <br>
+         <option>Are they interested in health and fitness?</option>
+         <input type="radio" class="health" value="yes" id="health_yes" name="health">Yes
+         <input type="radio" class="health" value="no" id="health_no" name="health">No<br>
+         <div id="id_checked_health" style="display: none">
+            <select id="health" multiple="multiple" name="health[]" style="display: none;">
+               <option value="vegan">Vegan Lifestyle</option>
+               <option value="sport_acc">Sports Accessories</option>
+            </select><div class="btn-group"><button type="button" class="multiselect dropdown-toggle btn btn-default" data-toggle="dropdown" title="None selected"><span class="multiselect-selected-text">None selected</span> <b class="caret"></b></button><ul class="multiselect-container dropdown-menu"><li class="multiselect-item multiselect-all"><a tabindex="0" class="multiselect-all"><label class="checkbox"><input type="checkbox" value="multiselect-all">  Select all</label></a></li><li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="vegan"> Vegan Lifestyle</label></a></li><li><a tabindex="0"><label class="checkbox"><input type="checkbox" value="sport_acc"> Sports Accessories</label></a></li></ul></div>
+         </div>
+         <br><div id="healthmsg" class="validation-msg" style="display: none">Please select at least one</div>
+         <br>
+         <option id="quirky">Are they the quirky type?</option>
+         <input type="radio" class="quirky" value="yes" name="quirky">Yes
+         <input type="radio" class="quirky" value="no" name="quirky">No<br>
+         <br><div id="quirkymsg" class="validation-msg" style="display: none">Please select at one</div>
+         <br>
+         <option id="giftcard">Would you like to see Gift Cards?</option>
+         <input type="radio" class="giftcard" value="yes" name="gift_yes">Yes
+         <input type="radio" class="giftcard" value="" name="gift_no">No<br>
+         <br><div id="cardmsg" class="validation-msg" style="display: none">Please select one</div>
+         <br>
+         <input type="submit" value="Confirm Selection" class="button-box">
+        
+    </div></form>
+</center>
+    <br>
+    <br>
+    <!-- These scripts have to be down here-->
+    <script src="./questionnaire_files/index.js.download"></script>
+	<script src="./questionnaire_files/bootstrap-select.js.download"></script>
+
+    
+
+
+</body></html>

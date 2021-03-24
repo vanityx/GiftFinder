@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!-- saved from url=(0100)https://www.pythonanywhere.com/user/lon17druz01/files/home/lon17druz01/mysite/templates/addprod.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!--  Styles  -->
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+  <link rel="stylesheet" href="./addprod_files/template.css">
+  <link rel="stylesheet" href="./addprod_files/dbAccess.css">
+  <!-- Scripts -->
+  <script src="./addprod_files/validation.js.download"></script>
+
+  <!--  Navigation bar -->
+  
+  <title>Gift Finder</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="https://www.pythonanywhere.com/login"><img src="./addprod_files/signin.png" class="login-logo"></a>
+                <a href="https://www.pythonanywhere.com/" class="logo-title">Gift Finder</a>
+            <nav>
+                <ul>
+                    <li><a href="https://www.pythonanywhere.com/">Home</a></li>
+                    <li><a href="https://www.pythonanywhere.com/about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+<br>
+<a href="https://www.pythonanywhere.com/dbMenu">Return to menu</a>
+<br>
+<h1> Add a Product </h1>
+
+<form action="https://www.pythonanywhere.com/user/lon17druz01/files/home/lon17druz01/mysite/templates/addresults" method="POST" onsubmit="return validateAddProd()">
+<div class="input-box">
+<p>Product name:    <input type="text" name="product_name" id="product_name">
+</p><p>Description:     <input type="text" name="product_desc" id="product_desc">
+</p><p>Product price:   <input type="text" name="product_price" id="product_price">
+</p><p>Product url:     <input type="text" name="product_url" id="product_url">
+</p><p>Product IMG:     <input type="text" name="product_img" id="product_img">
+</p><p>Company name:
+<select name="company_no" class="dropBox selectpicker" id="company_no">
+  <option value="">Select a Company</option>
+  {% for i in range(0,length1) %}
+  <option value="{{ company_no[i] }}">{{ company_name[i] }}</option>
+  {% endfor %}
+</select>
+</p></div>
+<div id="msg" class="validation-msg" style="display: none;">Error: Please enter all fields.</div>
+<br>
+<input type="submit" value="Submit">
+</form>
+
+<!-- Scripts -->
+<script src="./addprod_files/index.js.download"></script>
+
+
+
+</body></html>

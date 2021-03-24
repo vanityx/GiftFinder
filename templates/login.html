@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!-- saved from url=(0098)https://www.pythonanywhere.com/user/lon17druz01/files/home/lon17druz01/mysite/templates/login.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!--  Styles  -->
+
+  <link rel="stylesheet" href="./login_files/template.css">
+  <link rel="stylesheet" href="./login_files/dbAccess.css">
+
+  <!--  Styles  -->
+  <script src="./login_files/validation.js.download"></script>
+
+  <!--  Navigation bar -->
+  
+  <title>Gift Finder</title>
+</head>
+
+<body style="zoom: 1;">
+    <header>
+        <div class="container">
+            <a href="https://www.pythonanywhere.com/login"><img src="./login_files/signin.png" class="login-logo"></a>
+                <a href="https://www.pythonanywhere.com/" class="logo-title">Gift Finder</a>
+            <nav>
+                <ul>
+                    <li><a href="https://www.pythonanywhere.com/">Home</a></li>
+                    <li><a href="https://www.pythonanywhere.com/about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+<br>
+<br>
+
+  <div class="container">
+      <h1>Login to the Gift Database</h1>
+      <br>
+      <form action="https://www.pythonanywhere.com/user/lon17druz01/files/home/lon17druz01/mysite/templates/login.html" method="post" onsubmit="return validateLogin()">
+        <input type="text" placeholder="username" name="username" id="username" value="{{request.form.username }}">
+      <br>
+      <br>
+         <input type="password" placeholder="password" name="password" id="password" value="{{request.form.password }}">
+      <br>
+        <input type="submit" onclick="location.href=&#39;/dbMenu&#39;" ;="" value="Login">
+      </form>
+
+      {% if error %}
+        <div class="validation-msg"><strong>Error:</strong> {{ error }}
+      {% endif %}
+    </div>
+
+<script src="./login_files/jquery.min.js.download" type="text/javascript"></script>
+
+
+  <!-- Scripts -->
+  <script src="./login_files/index.js.download"></script>
+
+
+</div></body></html>

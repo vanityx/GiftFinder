@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!-- saved from url=(0108)https://www.pythonanywhere.com/user/lon17druz01/files/home/lon17druz01/mysite/templates/product_listing.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!--  Styles  -->
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+  <link rel="stylesheet" href="./product_listing_files/template.css">
+  <link rel="stylesheet" href="./product_listing_files/products.css">
+
+  <!--  Navigation bar -->
+  
+  <title>Gift Finder</title>
+</head>
+
+  <body>
+
+      <header>
+        <div class="container">
+            <a href="https://www.pythonanywhere.com/login"><img src="./product_listing_files/signin.png" class="login-logo"></a>
+                <a href="https://www.pythonanywhere.com/" class="logo-title">Gift Finder</a>
+            <nav>
+                <ul>
+                    <li><a href="https://www.pythonanywhere.com/">Home</a></li>
+                    <li><a href="https://www.pythonanywhere.com/about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <br>
+<div id="product-listing-box">
+
+      <img src="./product_listing_files/{{ img }}" class="listing-img">
+
+      <p align="left"><b>{{ name }}</b></p>
+      <p align="left" style="font-size: 14px">{{ company_name }}</p>
+      <p align="left">£{{ price }}</p>
+      <p align="left">{{ desc }}</p>
+      <!--<p align="left"><a href="{{ url }}">Buy the Product</a></p>-->
+      <br>
+      <a class="button-box" href="https://www.pythonanywhere.com/user/lon17druz01/files/home/lon17druz01/mysite/templates/%7B%7B%20url%20%7D%7D" target="_blank">
+          <span>Buy Product</span>
+      </a>
+      <br>
+      <br>
+      <br>
+</div>
+
+    <!-- Scripts -->
+  <script src="./product_listing_files/index.js.download"></script>
+
+
+
+
+
+
+
+
+  
+
+  </body></html>

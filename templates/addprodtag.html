@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!-- saved from url=(0103)https://www.pythonanywhere.com/user/lon17druz01/files/home/lon17druz01/mysite/templates/addprodtag.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!--  Styles  -->
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+  <script src="./addprodtag_files/jquery.min.js.download"></script>
+  <script src="./addprodtag_files/index.js.download"></script>
+  <script src="./addprodtag_files/chosen.jquery.min.js.download"></script>
+  <link href="./addprodtag_files/chosen.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./addprodtag_files/template.css">
+  <link rel="stylesheet" href="./addprodtag_files/dbAccess.css">
+  <!-- Scripts -->
+
+  <!--  Navigation bar -->
+  
+  <title>Gift Finder</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <a href="https://www.pythonanywhere.com/login"><img src="./addprodtag_files/signin.png" class="login-logo"></a>
+                <a href="https://www.pythonanywhere.com/" class="logo-title">Gift Finder</a>
+            <nav>
+                <ul>
+                    <li><a href="https://www.pythonanywhere.com/">Home</a></li>
+                    <li><a href="https://www.pythonanywhere.com/about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+<br>
+<a href="https://www.pythonanywhere.com/dbMenu">Return to menu</a>
+<br>
+<h1> Add a Tag to a Product </h1>
+
+<p>Select or deselect tags of a product to add or remove them.</p>
+
+<form onload="changeSize_onload()" action="https://www.pythonanywhere.com/user/lon17druz01/files/home/lon17druz01/mysite/templates/prodtagresults" method="POST">
+
+<select id="dropdown" onclick="changeSize_onload()" class="pSelect" onchange="showTags(this.value)" name="product">
+  <option value="">Select Product</option>
+  {% for i in range(0,length) %}
+  <option value="{{ product_no[i] }}">{{ product_name[i] }}</option>
+  {% endfor %}
+</select>
+	<div id="tags_select">
+		  <select data-placeholder="Type a tag to add..." multiple="" class="chosen-select pSelect" id="tag_selecter" name="newtags">
+		  </select>
+		 <div id="submit_button"><input type="submit"></div>
+
+<br>
+<div id="debug1">
+
+</div>
+<div id="debug2">
+
+</div>
+<!-- Scripts -->
+
+
+</div></form></body></html>

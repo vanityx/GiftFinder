@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!-- saved from url=(0103)https://www.pythonanywhere.com/user/lon17druz01/files/home/lon17druz01/mysite/templates/product_pg.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!--  Styles  -->
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+  <link rel="stylesheet" href="./product_pg_files/template.css">
+  <link rel="stylesheet" href="./product_pg_files/products.css">
+
+  <!--  Navigation bar -->
+  
+  <title>Gift Finder</title>
+</head>
+  <body>
+
+      <header>
+        <div class="container">
+            <a href="https://www.pythonanywhere.com/login"><img src="./product_pg_files/signin.png" class="login-logo"></a>
+                <a href="https://www.pythonanywhere.com/" class="logo-title">Gift Finder</a>
+            <nav>
+                <ul>
+                    <li><a href="https://www.pythonanywhere.com/">Home</a></li>
+                    <li><a href="https://www.pythonanywhere.com/about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+<div id="center-product-box" class="threerow">
+
+    <!-- Single product -->
+    {% for i in range(0,length) %}
+    <div class="product-grid__wrapper">
+    <div class="product-grid__product-wrapper">
+					<div class="product-grid__product">
+						<div class="product-grid__img-wrapper">
+							<img src="./product_pg_files/{{ img[i] }}" class="product-grid__img">
+						</div>
+						<span class="product-grid__title">{{ name[i] }}</span>
+						<span class="product-grid__price">£{{ price[i] }}</span>
+						<div class="product-grid__extend-wrapper">
+							<div class="product-grid__extend">
+								<p class="product-grid__description" maxlength="10">{{ desc[i] }}..</p>
+								<button onclick="window.location.href =&#39;/product_listing?product_no={{ product_no[i] }}&#39;" class="view-more-btn">View more</button>
+								<!-- product-grid__btn product-grid__view -->
+							</div>
+						</div>
+					</div>
+				</div>
+            </div>
+    {% endfor %}
+    <!-- end Single product -->
+
+</div>
+
+
+  
+
+  <!-- Scripts -->
+  <script src="./product_pg_files/index.js.download"></script>
+
+
+
+</body></html>

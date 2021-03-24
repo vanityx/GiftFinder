@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<xml>
+    <product_tags>
+    {% for i in range (0,ptlength) %}
+    <tag>
+        <id>{{ ptag_no[i] }}</id>
+        <name>{{ ptag_name[i] }}</name>
+    </tag>{% endfor %}
+    </product_tags>
+    <alltag>
+    {% for x in range (0,tlength) %}
+    <tag>
+        <all_id>{{ tag_no[x] }}</all_id>
+        <all_name>{{ tag_name[x] }}</all_name>
+    </tag>
+    {% endfor %}</alltag>
+    <extendedtags>{{ tag_name }}</extendedtags>
+</xml>
+
+

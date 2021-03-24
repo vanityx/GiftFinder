@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!-- saved from url=(0099)https://www.pythonanywhere.com/user/lon17druz01/files/home/lon17druz01/mysite/templates/addtag.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!--  Styles  -->
+
+  <link rel="stylesheet" href="./addtag_files/template.css">
+  <link rel="stylesheet" href="./addtag_files/dbAccess.css">
+  <!-- Scripts -->
+  <script src="./addtag_files/validation.js.download"></script>
+
+  <!--  Navigation bar -->
+  
+  <title>Gift Finder</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <a href="https://www.pythonanywhere.com/login"><img src="./addtag_files/signin.png" class="login-logo"></a>
+                <a href="https://www.pythonanywhere.com/" class="logo-title">Gift Finder</a>
+            <nav>
+                <ul>
+                    <li><a href="https://www.pythonanywhere.com/">Home</a></li>
+                    <li><a href="https://www.pythonanywhere.com/about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+<br>
+<a href="https://www.pythonanywhere.com/dbMenu">Return to menu</a>
+<br>
+<h1> Add a Tag </h1>
+
+<form action="https://www.pythonanywhere.com/user/lon17druz01/files/home/lon17druz01/mysite/templates/addtagresults" method="POST" onsubmit="return validateAddTag()">
+<div class="input-box">
+<p>Tag name:     <input type="text" name="tag_name" id="tag_name">
+</p></div>
+<div id="msg" class="validation-msg" style="display: none;">Error: Please enter the field.</div>
+<input type="submit" value="Submit">
+</form>
+
+
+
+
+<!-- Scripts -->
+<script src="./addtag_files/index.js.download"></script>
+
+
+
+</body></html>

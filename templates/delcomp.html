@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!-- saved from url=(0100)https://www.pythonanywhere.com/user/lon17druz01/files/home/lon17druz01/mysite/templates/delcomp.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!--  Styles  -->
+
+  <link rel="stylesheet" href="./delcomp_files/template.css">
+  <link rel="stylesheet" href="./delcomp_files/dbAccess.css">
+  <!-- Scripts -->
+  <script src="./delcomp_files/validation.js.download"></script>
+
+  <!--  Navigation bar -->
+  
+  <title>Gift Finder</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <a href="https://www.pythonanywhere.com/login"><img src="./delcomp_files/signin.png" class="login-logo"></a>
+                <a href="https://www.pythonanywhere.com/" class="logo-title">Gift Finder</a>
+            <nav>
+                <ul>
+                    <li><a href="https://www.pythonanywhere.com/">Home</a></li>
+                    <li><a href="https://www.pythonanywhere.com/about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+<br>
+<a href="https://www.pythonanywhere.com/dbMenu">Return to menu</a>
+<br>
+<h1> Delete a Company </h1>
+
+<form action="https://www.pythonanywhere.com/user/lon17druz01/files/home/lon17druz01/mysite/templates/delcompresults" method="POST" onsubmit="return validateDelComp()">
+<div class="input-box">
+<p> Company name:
+<select name="company_no" id="company_no" class="dropBox selectpicker">
+  <option value="">Select a company</option>
+  {% for i in range(0,length) %}
+  <option value="{{ company_no[i] }}">{{ company_name[i] }}</option>
+  {% endfor %}
+</select>
+</p><p>
+</p></div>
+<div id="msg" class="validation-msg" style="display: none;">Error: Please enter the field.</div>
+<input type="submit" value="Submit">
+</form>
+
+<!-- Scripts -->
+<script src="./delcomp_files/index.js.download"></script>
+
+
+
+</body></html>

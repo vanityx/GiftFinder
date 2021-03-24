@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!-- saved from url=(0101)https://www.pythonanywhere.com/user/lon17druz01/files/home/lon17druz01/mysite/templates/listTags.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!--  Styles  -->
+
+  <link rel="stylesheet" href="./listTags_files/template.css">
+  <link rel="stylesheet" href="./listTags_files/dbAccess.css">
+
+  <!--  Navigation bar -->
+  
+  <title>Gift Finder</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <a href="https://www.pythonanywhere.com/login"><img src="./listTags_files/signin.png" class="login-logo"></a>
+                <a href="https://www.pythonanywhere.com/" class="logo-title">Gift Finder</a>
+            <nav>
+                <ul>
+                    <li><a href="https://www.pythonanywhere.com/">Home</a></li>
+                    <li><a href="https://www.pythonanywhere.com/about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <br>
+
+<h1>All Tags</h1>
+<a href="https://www.pythonanywhere.com/dbMenu">Return to menu</a>
+<br>
+
+{% for row in rows %}
+
+{% endfor %}
+<table>
+<tbody><tr>
+    <th>ID</th>
+    <th>Name</th>
+</tr><tr>
+
+    <td>{{ row[0] }}</td>
+    <td>{{ row[1] }}</td>
+
+</tr></tbody></table>
+
+
+
+
+  <!-- Scripts -->
+  <script src="./listTags_files/index.js.download"></script>
+
+
+</body></html>

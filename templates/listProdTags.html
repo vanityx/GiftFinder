@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!-- saved from url=(0105)https://www.pythonanywhere.com/user/lon17druz01/files/home/lon17druz01/mysite/templates/listProdTags.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!--  Styles  -->
+
+  <link rel="stylesheet" href="./listProdTags_files/template.css">
+  <link rel="stylesheet" href="./listProdTags_files/dbAccess.css">
+
+  <!--  Navigation bar -->
+  
+  <title>Gift Finder</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <a href="https://www.pythonanywhere.com/login"><img src="./listProdTags_files/signin.png" class="login-logo"></a>
+                <a href="https://www.pythonanywhere.com/" class="logo-title">Gift Finder</a>
+            <nav>
+                <ul>
+                    <li><a href="https://www.pythonanywhere.com/">Home</a></li>
+                    <li><a href="https://www.pythonanywhere.com/about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <br>
+
+<h1>Product Tags</h1>
+<a href="https://www.pythonanywhere.com/dbMenu">Return to menu</a>
+<br>
+
+<label>Select a product to view it's tags:</label>
+            <br>
+            <select name="product_no">
+             <option>Select</option>
+             {{for i in range(
+             <option value="{{product_no}}">{{product_name}}</option>
+
+            </select>
+
+
+{% for row in rows %}
+
+{% endfor %}
+<table>
+<tbody><tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Tags</th>
+</tr><tr>
+    <td>{{ row }}</td>
+</tr></tbody></table>
+
+
+  <!-- Scripts -->
+  <script src="./listProdTags_files/index.js.download"></script>
+
+
+</body></html>
